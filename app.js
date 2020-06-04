@@ -13,12 +13,16 @@ const PORT = process.env.PORT || 5200;
 const postsRoute = require('./src/routes/posts');
 const authRoute = require('./src/routes/auth')
 const movieManage = require('./src/routes/listMovie');
-const banner = require('./src/routes/bannerHome')
+const banner = require('./src/routes/bannerHome');
+const partner = require('./src/routes/partner');
+
 
 app.use('/posts', postsRoute);
 app.use('/api/user', authRoute);
 app.use('/api/QuanLyPhim', movieManage);
 app.use('/api/Banner', banner);
+app.use('/api/Partner', partner);
+
 
 //routes
 // app.get('/', (req, res) => {

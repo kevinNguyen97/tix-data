@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { _Post, _DeleteByID, _Get, _GetByID } = require('../method')
+const { _Post, _DeleteByID, _Get } = require('../method')
 const Banner = require('../models/Banner')
 
 
