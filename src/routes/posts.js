@@ -27,7 +27,7 @@ router.post('/', async (req, res) => {
 
 });
 // auth
-router.get('/auth',verify, async (req, res) => {
+router.get('/auth', verify, async (req, res) => {
     res.json({
         title: "my title",
         description: 'my description'

@@ -12,20 +12,18 @@ const PORT = process.env.PORT || 5200;
 //import postrouter
 const postsRoute = require('./src/routes/posts');
 const authRoute = require('./src/routes/auth')
-const movieManage = require('./src/routes/listMovie')
+const movieManage = require('./src/routes/listMovie');
+const banner = require('./src/routes/bannerHome')
 
-app.use('/posts',postsRoute);
-app.use('/api/user',authRoute)
-app.use('/api/QuanLyPhim',movieManage)
+app.use('/posts', postsRoute);
+app.use('/api/user', authRoute);
+app.use('/api/QuanLyPhim', movieManage);
+app.use('/api/Banner', banner);
 
 //routes
-app.get('/', (req, res) => {
-    res.send('home')
-})
-
-
-
-
+// app.get('/', (req, res) => {
+//     res.send('home')
+// })
 //conext to db
 mongoose.connect(
     process.env.DB_CONNECTION,
@@ -35,6 +33,6 @@ mongoose.connect(
     })
 
 
-app.listen(PORT,()=>{
-    console.log('server up and running'+PORT)
+app.listen(PORT, () => {
+    console.log('server up and running' + PORT)
 })
