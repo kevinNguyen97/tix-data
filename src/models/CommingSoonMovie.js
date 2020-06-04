@@ -37,7 +37,6 @@ const PhimModel = {
     }
 
 }
-const CurentMovieSchema = mongoose.Schema(PhimModel);
+const CommingSoonMovieSchema = mongoose.Schema(PhimModel);
 
-
-module.exports = mongoose.model('CurentMovie', CurentMovieSchema);
+module.exports = mongoose.model('CommingSoonMovie', CommingSoonMovieSchema);
