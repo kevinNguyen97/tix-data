@@ -29,7 +29,7 @@ router.post('/register', async (req, res) => {
         soDt: req.body.soDt,
         maNhom: req.body.maNhom,
         maLoaiNguoiDung: req.body.maLoaiNguoiDung,
-        hoTen: req.body.hoTen
+        hoTen: req.body.hoTen,
     });
 
 

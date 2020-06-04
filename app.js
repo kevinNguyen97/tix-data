@@ -12,9 +12,11 @@ const PORT = process.env.PORT || 5200;
 //import postrouter
 const postsRoute = require('./src/routes/posts');
 const authRoute = require('./src/routes/auth')
+const movieManage = require('./src/routes/listMovie')
 
 app.use('/posts',postsRoute);
 app.use('/api/user',authRoute)
+app.use('/api/QuanLyPhim',movieManage)
 
 //routes
 app.get('/', (req, res) => {
